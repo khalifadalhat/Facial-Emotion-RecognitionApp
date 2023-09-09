@@ -99,7 +99,7 @@ const App = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Text>{emotion}</Text>
+      <Text style={styles.h1}>{emotion}</Text>
       <Camera style={{ flex: 1 }} type={Camera.Constants.Type.front} ref={cameraRef} />
       <View style={styles.buttonContainer}>
       <Button title="Capture Image" onPress={captureImage} style={styles.button} color="#fff" />
@@ -113,6 +113,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 8,
     margin: 8,
+  },
+  h1: {
+    color: '#000',
+    fontSize: 40,
+    textAlign: 'center',
+    justifyContent: 'center',
   },
   bottomContainer: {
     justifyContent: 'flex-end',
